@@ -1,28 +1,29 @@
+import { describe, expect, it } from 'vitest';
 import {
   formatChangelogSection,
   formatCommitSlug,
   formatCommitLink,
   formatVersionRow,
   formatVersionSection,
-  formatMessage
-} from './format';
-import { ReleaseResult, Release } from './dry-run';
-import { ChangelogConfig } from './config';
+  formatMessage,
+} from '../format';
+import { ReleaseResult, Release } from '../dry-run';
+import { ChangelogConfig } from '../config';
 
 function makeReleaseResult(): ReleaseResult {
   return {
     lastRelease: {
       version: '1.0.0',
       gitHead: 'AAAAAA',
-      gitTag: '1.0.0'
+      gitTag: '1.0.0',
     },
     nextRelease: {
       version: '1.0.1',
       gitHead: 'AAAAAB',
       notes: ['A', 'B', 'C'],
       type: 'minor',
-      gitTag: '1.0.1'
-    }
+      gitTag: '1.0.1',
+    },
   };
 }
 
@@ -62,7 +63,7 @@ describe('formatVersionRow', () => {
     const release: Release = {
       gitHead: 'ABCDEFGH',
       gitTag: '1.0.0',
-      version: '1.0.0'
+      version: '1.0.0',
     };
     const result = formatVersionRow('Next', release);
     expect(result).toMatchInlineSnapshot(`"Next  | 1.0.0 | [ABCDEFGH](../blob/ABCDEFGH)"`);

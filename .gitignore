@@ -74,3 +74,5 @@ dist/
 coverage
 
 .rpt2_cache
+
+.idea

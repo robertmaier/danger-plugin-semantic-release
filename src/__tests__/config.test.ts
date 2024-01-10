@@ -1,4 +1,5 @@
-import { completeConfiguration } from './config';
+import { completeConfiguration } from '../config';
+import { describe, expect, it } from 'vitest';
 
 describe('completeConfiguration', () => {
   it('returns a default configuration when called without a configuration', () => {

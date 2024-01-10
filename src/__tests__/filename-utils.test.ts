@@ -1,4 +1,5 @@
-import { escapeMarkdownCharacters, indentAfterNewLines } from './filename-utils';
+import { escapeMarkdownCharacters, indentAfterNewLines } from '../filename-utils';
+import { describe, expect, it } from 'vitest';
 
 describe('escapeMarkdownCharacters', () => {
   it("escapes filenames with '|,(,),[,],#,*,{,},-,+,_,!,\\,`>' characters", () => {

@@ -14,7 +14,7 @@ function isEscapedCharacter(char: string) {
  * @returns An escaped version of the string
  */
 export function escapeMarkdownCharacters(source: string) {
-  return [...source].map(c => (isEscapedCharacter(c) ? `\\${c}` : c)).join('');
+  return [...source].map((c) => (isEscapedCharacter(c) ? `\\${c}` : c)).join('');
 }
 
 /**
@@ -23,5 +23,5 @@ export function escapeMarkdownCharacters(source: string) {
  * @returns An indented version of the string.
  */
 export function indentAfterNewLines(source: string) {
-  return [...source].map(c => (c === '\n' ? '\n  ' : c)).join('');
+  return [...source].map((c) => (c === '\n' ? '\n  ' : c)).join('');
 }

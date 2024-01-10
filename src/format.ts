@@ -1,5 +1,5 @@
-import { ChangelogConfig } from 'config';
-import { ReleaseResult, Release } from 'dry-run';
+import { ChangelogConfig } from './config';
+import { ReleaseResult, Release } from './dry-run';
 import { escapeMarkdownCharacters, indentAfterNewLines } from './filename-utils';
 
 export declare function markdown(message: string): void;

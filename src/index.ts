@@ -1,6 +1,6 @@
-import { completeConfiguration, ChangelogConfig } from 'config';
-import { dryRunRelease } from 'dry-run';
-import { formatMessage } from 'format';
+import { completeConfiguration, ChangelogConfig } from './config';
+import { dryRunRelease } from './dry-run';
+import { formatMessage } from './format';
 
 declare function markdown(message: string): void;
 
